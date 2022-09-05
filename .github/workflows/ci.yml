@@ -23,7 +23,10 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn package
+      run: mvn package -D maven.test.skip
+      env:
+        MYSQL_DB_USERNAME: ${{ secrets.MYSQL_DB_USERNAME }}
+        MYSQL_DB_PW: ${{ secrets.MYSQL_DB_PW }}
     - name: Docker Login
       uses: docker/login-action@v2.0.0
       with:
