@@ -1,0 +1,21 @@
+.stats{
+    margin-top: 10vh;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.information{
+    width: calc(350px - 4rem);
+    height: 200px;
+    border-radius: 10pt;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+    margin: 1rem;
+}

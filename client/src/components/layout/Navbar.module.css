@@ -1,0 +1,105 @@
+nav {
+  width: 100vw;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.nav_container {
+  height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_container ul {
+  display: none;
+}
+
+.nav_container li {
+  list-style-type: none;
+  margin-left: 2rem;
+}
+
+.burger {
+  height: 50px;
+  width: 25px;
+  margin: 0px;
+  position: relative;
+  z-index: 150;
+}
+
+.burger span {
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  display: block;
+  background-color: black;
+  border-radius: 2pt;
+  transition: 250ms;
+}
+
+.cross span{
+  width: 100% !important;
+  transform: rotate(45deg);
+  top: 50% !important;
+  transition: 250ms;
+}
+
+.cross span:first-child{
+  transform: rotate(-45deg);
+}
+
+.burger span:first-child {
+  top: 20px;
+}
+
+.burger span:last-child {
+  top: 30px;
+}
+
+.side_nav {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 100vh;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 0px;
+  animation: 500ms slide;
+}
+
+.side_nav li {
+  margin-bottom: 3rem;
+  margin-left: 0px;
+}
+
+@media only screen and (min-width: 700px){
+  .nav_container ul {
+    display: flex;
+  }
+
+  .burger{
+    display: none !important;
+  }
+}
+
+@keyframes slide {
+  from{
+    transform: translateX(75vw);
+  }
+  to{
+    transform: translateX(0vw);
+  }
+}

@@ -1,0 +1,36 @@
+.background {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+  background-color: rgba(80, 80, 80, 0.9);
+  display: grid;
+  place-items: center;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  .background {
+    background-color: rgba(150, 150, 150, 0.5);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
+}
+
+.popup{
+    width: calc(90% - 4rem);
+    margin: auto;
+    max-width: 600px;
+    height: 60vh;
+    background-color: white;
+    border-radius: 10pt;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.fixed{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
